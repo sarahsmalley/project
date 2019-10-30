@@ -18,7 +18,22 @@
             <ul id="property" class="list-group">
             </ul>
         </div>
-    
+ <span id = property >      
+    <br><br>
+        <table id="Property">
+        <tr>
+            <th>id</th>
+            <th>address</th>
+            <th>bedrooms</th>
+            <th>price</th>
+            <th>image</th>
+          
+          </tr>
+        </table>
+        <br>
+        What Address ID would you like to remove: <input type="text" id="deleteText">
+        <button type="button" id="deleteButton" class="btn btn-default btn-lg">Delete</button>
+    </span>   
     <div>
     <h3>Add new property</h3>
         <form onsubmit="return addProperty(this)">
@@ -26,9 +41,18 @@
                 <label for="property">address:</label> <input type="text"class="form-control" name="property" required>
             </div>
             <div class="form-group">
-                <label for="address">Ingredients:</label> <input type="text"
+                <label for="property">bedrooms:</label> <input type="text"
                     class="form-control" name="Property" required>
             </div>
+            <div class="form-group">
+                <label for="property">price:</label> <input type="text"
+                    class="form-control" name="Property" required>
+            </div>
+            <div class="form-group">
+                <label for="property">image:</label> <input type="text"
+                    class="form-control" name="Property" required>
+            </div>
+            
             <input class="btn btn-primary pull-right" type="submit"/>
         </form>
     </div>

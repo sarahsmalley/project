@@ -26,12 +26,12 @@ function renderToScreen(data) {
         let button = document.createElement("button");
         button.innerText = "Delete";
         button.addEventListener("click", function() {
-            deleteRecipe(property.id);
+            deleteProperty(property.id);
         });
         let button1 = document.createElement("button");
         button1.innerText = "Edit";
         button1.addEventListener("click", function edit() {
-            editRecipe(listItem , edit, button1, recipe)
+            editProperty(listItem , edit, button1, recipe)
         });
         listItem.append(text);
         listItem.append(button);
