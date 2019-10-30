@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+ <title>Sarah's Properties</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ 
+ 
+</head>
+<body>
+<div class="jumbotron text-center">
+ <h1 class="myClass">Properties</h1>
+</div>
+        <h3>List of current properties:</h3>
+        <div>
+            <ul id="property" class="list-group">
+            </ul>
+        </div>
+    
+    <div>
+    <h3>Add new property</h3>
+        <form onsubmit="return addProperty(this)">
+            <div class="form-group">
+                <label for="property">address:</label> <input type="text"class="form-control" name="property" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Ingredients:</label> <input type="text"
+                    class="form-control" name="Property" required>
+            </div>
+            <input class="btn btn-primary pull-right" type="submit"/>
+        </form>
+    </div>
+    
+</body>
+<script src = "javascript/property.js"></script>
+</html>
+
