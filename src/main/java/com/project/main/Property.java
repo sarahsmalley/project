@@ -20,35 +20,42 @@ public class Property {
 		super();
 	}
 
-	public Property(String address, int bedrooms, String image, int price) {
-		super();
-		this.address=address;
-		this.bedrooms=bedrooms;
-		this.image=image;
-		this.price=price;
+	public Integer getId() {
+		return id;
 	}
-	
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	public String getAddress() {
 		return address;
 	}
+
 	public void setAddress(String address) {
 		this.address = address;
 	}
+
 	public int getBedrooms() {
 		return bedrooms;
 	}
+
 	public void setBedrooms(int bedrooms) {
 		this.bedrooms = bedrooms;
 	}
+
 	public String getImage() {
 		return image;
 	}
+
 	public void setImage(String image) {
 		this.image = image;
 	}
+
 	public int getPrice() {
 		return price;
 	}
+
 	public void setPrice(int price) {
 		this.price = price;
 	}

@@ -3,6 +3,7 @@ package com.project.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,17 +13,22 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.project.main.Property;
+import com.project.repository.PropertyRepo;
 import com.project.service.PropertyService;
 
 @RestController
+@CrossOrigin("*")
 public class PropertyController {
 	
 	@Autowired
 	private PropertyService propertyService;
 	
+	@Autowired
+	private PropertyRepo repo;
+	
 	@GetMapping("/property/showall")
 	public List<Property> getAllProperties(){
-		return propertyService.getAllProperties();
+		return repo.findAll();
 	}
 	
 	@PostMapping("/property")
@@ -35,9 +41,9 @@ public class PropertyController {
 		return propertyService.updateProperty(property);
 	}
 	
-	@DeleteMapping("/property/{address}")
-	public String deleteProperty(@PathVariable(value = "address") String address) {
-		return propertyService.deleteProperty(address);
+	@DeleteMapping("/property/{id}")
+	public String deleteProperty(@PathVariable int id) {
+		return propertyService.deleteProperty(id);
 	}
 
 
